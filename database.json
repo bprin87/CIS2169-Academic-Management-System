@@ -1,0 +1,84 @@
+{
+    "degree_programme": [
+        {
+            "id": "WDU23",
+            "degree_title": "Web Design, Development and Analytics",
+            "degree_type": "Undergraduate",
+            "learning_outcome": "Develop the skills required to become a web developer."
+        },
+        {
+            "id": "CP23",
+            "degree_title": "Computing",
+            "degree_type": "Postgraduate",
+            "learning_outcome": "Become skilled in the technologies that shape the world around us."
+        }
+    ],
+    "module": [
+        {
+            "id": "CIS2182",
+            "module_title": "Fundamentals of Web Coding",
+            "hours": 20,
+            "credits": 20,
+            "learning_outcome": "Gain an understanding of the fundamentals of coding for the web, core algorithms, and data structures.",
+            "degree_programme_id": "WDU23"
+        },
+        {
+            "id": "CIS4513",
+            "module_title": "Machine Learning",
+            "hours": 20,
+            "credits": 20,
+            "learning_outcome": "Understanding of the key algorithmic approaches to big data analytics.",
+            "degree_programme_id": "CP23"
+         }
+    ],
+    "assessments":[
+        {
+            "id": "2182",
+            "assessment_title": "CW1",
+            "weighting": "20%",
+            "volume": "1000 words",
+            "submission_date":"01/10/2023",
+            "learning_outcome": "Build up the knowledge to create a fully functioning web application",
+            "module_id": "CIS2182"
+        },
+        
+        {
+            "id": "4513",
+            "assessment_title": "CW1",
+            "weighting": "20%",
+            "volume": "2000 words",
+            "submission_date":"01/10/2023",
+            "learning_outcome": "Understanding of the main algorithmic techniques and their practical implementation in big data analytics.",
+            "module_id": "CIS4513"
+        }
+    ],
+    "users":[
+        {
+            "id": "dan@ehu.co.uk",
+            "password": "password",
+            "account_type": "academic"
+        },
+        {
+            "id": "dave@ehu.co.uk",
+            "password": "password",
+            "account_type": "head_of_department"
+        }
+    ],
+    "time_slot":[
+        {
+            "module_id": "CIS2182",
+            "room": "THF04",
+            "day": "Tuesday",
+            "start_time": "09:00",
+            "end_time": "12:00"
+        },
+        
+        {
+            "module_id": "CIS4513",
+            "room": "THG04",
+            "day": "Monday",
+            "start_time": "09:00",
+            "end_time": "12:00"
+        }  
+    ]
+}
