@@ -30,7 +30,7 @@
           </ul>  
           <ul class="navbar-nav right">
             <li class="nav-item logout">
-              <button class="btn btn-outline-light" type="button">Log Out</button>
+              <a href="/login.html"><button class="btn btn-outline-light" type="button">Log Out</button></a>
             </li>
           </ul>      
         </div>
@@ -47,56 +47,59 @@
       <table class="table">
         <thead>
           <tr class="bg-primary">
-            <th class="bg-primary text-light" scope="col">Title</th>
-            <th class="bg-primary text-light" scope="col">Type</th>
-            <th class="bg-primary text-light" scope="col">Module(s)</th>
+            <th class="bg-primary text-light">Title</th>
+            <th class="bg-primary text-light">ID</th>
+            <th class="bg-primary text-light">Type</th>
+            <th class="bg-primary text-light">Module(s)</th>
+            <th class="bg-primary text-light">Learning Outcome</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="bg-light">
-            <!-- amend to pull in from json file -->
-            <td class="text-primary" id="display-degree-title"></td>
-            <td class="text-primary" id="display-degree-type"></td>
-            <td class="text-primary" id="display-degree-modules"></td>
-          </tr>
-        </tbody>
+        <tbody id="degree-table-body" class="bg-light text-primary"></tbody>
       </table>
 
       <!-- Create Degree Programme -->
       <div class="create">
         <h3 class="text-primary">Create Degree Programme</h3>
 
-        <form class="create-degree">
-          <div class="mb-3">
+        <form class="row g-3  create-degree" action="">
+          <div class="col-md-9">
             <label for="" class="form-label text-primary">Degree Programme Title</label>
-            <input type="text" class="form-control text-primary border-blue" id="degree-title" name="degree-title" placeholder="Enter degree programme title">
+            <input type="text" class="form-control text-primary border-blue" id="create-degree-title" name="create-degree-title" placeholder="Enter degree programme title">
           </div>
-
-          <div class="mb-3">
+          <div class="col-md-3">
+            <label for="" class="form-label text-primary">Degree ID</label>
+            <input type="text" class="form-control text-primary border-blue" id="create-degree-id">
+          </div>
+          <div class="col-md-12">
             <label for="" class="form-label text-primary">Degree Type</label>
-            <select class="form-select border-blue">
+            <select class="form-select border-blue" id="select-degree-type">
               <option selected>Select degree type</option>
               <option value="1">Undergraduate</option>
               <option value="2">Postgraduate</option>
             </select>
           </div>
-
-          <div class="mb-3">
-            <label for="" class="form-label text-primary">Add Module</label>
-            <select class="form-select border-blue" id="module-option">
-              <option selected>Select module</option>
-              <!-- add options from json file -->
+           <div class="col-md-12">
+            <label for="" class="form-label text-primary">Module</label>
+            <select class="form-select border-blue" id="select-degree-module">
+              <option selected>Select Module</option>
+              <option value=""></option>
             </select>
           </div>
-
-          <button type="button" class="btn btn-primary btn-another">Add Another Module</button>
-          <button type="submit" class="btn btn-success btn-save">Save Degree Programme</button>
+          <div class="col-md-12">
+            <label for="" class="form-label text-primary">Learning Outcome</label>
+            <textarea class="form-control text-primary border-blue" id="create-degree-outcome" rows="3" placeholder="Explain the learning outcome of the module"></textarea>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-success btn-save" id="save-degree-btn">Save Degree Programme</button>
+          </div>
         </form>
       </div>
       
     
   </main>
 
-  <script src="main.js"></script>
+  <script src="degree.js"></script>
 </body>
 </html>
+
+
