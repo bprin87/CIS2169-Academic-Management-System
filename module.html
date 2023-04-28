@@ -30,7 +30,7 @@
           </ul>  
           <ul class="navbar-nav right">
             <li class="nav-item logout">
-              <button class="btn btn-outline-light" type="button">Log Out</button>
+              <a href="/login.html"><button class="btn btn-outline-light" type="button">Log Out</button></a>
             </li>
           </ul>      
         </div>
@@ -46,65 +46,65 @@
       <table class="table">
         <thead>
           <tr class="bg-primary">
-            <th class="bg-primary text-light" scope="col">ID</th>
-            <th class="bg-primary text-light" scope="col">Title</th>
+            <th class="bg-primary text-light">Title</th>
+            <th class="bg-primary text-light">ID</th>
+            <th class="bg-primary text-light">Hours</th>
+            <th class="bg-primary text-light">Credits</th>
+            <th class="bg-primary text-light">Learning Outcome</th>
           </tr>
         </thead>
-        <tbody>
-            <tr class="bg-light">
-                <!-- amend to pull in from json file -->
-                <td class="text-primary">CIS2182</td>
-                <td class="text-primary">Fundamentals of Web Coding</td>
-              </tr>
-          <tr class="bg-light">
-            <!-- amend to pull in from json file -->
-            <td class="text-primary">CIS2183</td>
-            <td class="text-primary">Web Systems Development & Security</td>
-          </tr>
-        </tbody>
+        <tbody id="module-table-body" class="bg-light text-primary"></tbody>
       </table>
 
+      <!-- Create Module -->
       <div class="create">
         <h3 class="text-primary">Create Module</h3>
 
         <form class="row g-3 create-module">
             <div class="col-md-6">
               <label for="" class="form-label text-primary">Module Title</label>
-              <input type="text" class="form-control text-primary border-blue" id="">
+              <input type="text" class="form-control text-primary border-blue" id="create-module-title" placeholder="Enter module title">
             </div>
             <div class="col-md-6">
               <label for="" class="form-label text-primary">Module ID</label>
-              <input type="text" class="form-control text-primary border-blue" id="">
+              <input type="text" class="form-control text-primary border-blue" id="create-module-id" placeholder="Enter module id">
             </div>
             <div class="col-md-3">
               <label for="" class="form-label text-primary">No. of Hours</label>
-              <input type="text" class="form-control text-primary border-blue" id="" placeholder="Hours">
+              <input type="text" class="form-control text-primary border-blue" id="create-module-hours" placeholder="Hours">
             </div>
             <div class="col-md-3">
               <label for="" class="form-label text-primary">No. of Credits</label>
-              <input type="text" class="form-control text-primary border-blue" id="" placeholder="Credits">
-            </div>
-            <div class="col-md-6">
-              <label for="" class="form-label text-primary">Choose Degree Programme</label>
-              <select id="" class="form-select text-primary border-blue">
-                <option selected>Select Degree Programme</option>
-                <option>...</option>
-              </select>
+              <input type="text" class="form-control text-primary border-blue" id="create-module-credits" placeholder="Credits">
             </div>
             <div class="col-md-12">
                 <label for="" class="form-label text-primary">Learning Outcome</label>
-                <textarea class="form-control text-primary border-blue" id="" rows="3" placeholder="Explain the learning outcome of the module"></textarea>
+                <textarea class="form-control text-primary border-blue" id="create-module-outcome" rows="3" placeholder="Explain the learning outcome of the module"></textarea>
               </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-success col-md-3">Save Module</button>
+              <button type="submit" class="btn btn-success col-md-3" id="save-module-btn">Save Module</button>
             </div>
           </form>
-        
       </div>
-      
+
+      <!-- Module Time Table - created by Department Head -->
+      <h3 class="text-primary">Module Time Table</h3>
+      <table class="table">
+        <thead>
+          <tr class="bg-primary">
+            <th class="bg-primary text-light">Modue ID</th>
+            <th class="bg-primary text-light">Room</th>
+            <th class="bg-primary text-light">Day</th>
+            <th class="bg-primary text-light">Start Time</th>
+            <th class="bg-primary text-light">End Time</th>
+          </tr>
+        </thead>
+        <tbody id="timeslot-table-body" class="bg-light text-primary"></tbody>
+      </table>
     
   </main>
+<script src="module.js"></script>
 
-  <script src="main.js"></script>
+
 </body>
 </html>
