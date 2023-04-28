@@ -33,7 +33,7 @@
     ],
     "assessments":[
         {
-            "id": "2182",
+            "id": "CIS2182",
             "assessment_title": "CW1",
             "weighting": "20%",
             "volume": "1000 words",
@@ -43,7 +43,7 @@
         },
         
         {
-            "id": "4513",
+            "id": "CIS4513",
             "assessment_title": "CW1",
             "weighting": "20%",
             "volume": "2000 words",
@@ -52,20 +52,25 @@
             "module_id": "CIS4513"
         }
     ],
-    "users":[
+    "user":[
         {
-            "id": "dan@ehu.co.uk",
-            "password": "password",
-            "account_type": "academic"
+            "id": "1",
+            "user_role": "Academic",
+            "name": "Dan",
+            "email": "dan@ehu.ac.uk",
+            "password": "password"
         },
         {
-            "id": "dave@ehu.co.uk",
-            "password": "password",
-            "account_type": "head_of_department"
+            "id": "2",
+            "user_role": "Department Head",
+            "name": "Dave",
+            "email": "dave@ehu.ac.uk",
+            "password": "password"
         }
     ],
     "time_slot":[
         {
+            "id": "1",
             "module_id": "CIS2182",
             "room": "THF04",
             "day": "Tuesday",
@@ -74,6 +79,7 @@
         },
         
         {
+            "id": "2",
             "module_id": "CIS4513",
             "room": "THG04",
             "day": "Monday",
@@ -81,4 +87,4 @@
             "end_time": "12:00"
         }  
     ]
-}
+} 
