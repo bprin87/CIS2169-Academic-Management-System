@@ -69,6 +69,7 @@ function createTableRow(module) {
   return row;
 }
 
+
 // Populate the table with the modules from local storage using a for loop
 modules.forEach((module) => {
   const row = createTableRow(module);
@@ -113,4 +114,40 @@ saveModuleBtn.addEventListener('click', (event) => {
     document.getElementById('create-module-credits').value = '';
     document.getElementById('create-module-outcome').value = '';
   }
+});
+
+// Display time slot information from timeslot.html page
+const newTableBody = document.getElementById('timeslot-table-body');
+
+let timeslots = JSON.parse(localStorage.getItem('timeslots')) || [];
+
+function createTableRow(timeslot) {
+  const newRow = document.createElement('tr');
+
+  const idCell = document.createElement('td');
+  idCell.textContent = timeslot.id;
+  newRow.appendChild(idCell);
+
+  const roomCell = document.createElement('td');
+  roomCell.textContent = timeslot.room;
+  newRow.appendChild(roomCell);
+
+  const dayCell = document.createElement('td');
+  dayCell.textContent = timeslot.day;
+  newRow.appendChild(dayCell);
+
+  const startTimeCell = document.createElement('td');
+  startTimeCell.textContent = timeslot.startTime;
+  newRow.appendChild(startTimeCell);
+
+  const endTimeCell = document.createElement('td');
+  endTimeCell.textContent = timeslot.endTime;
+  newRow.appendChild(endTimeCell);
+
+  return newRow ;
+}
+
+timeslots.forEach((timeslot) => {
+  const newRow = createTableRow(timeslot);
+  newTableBody.appendChild(newRow);
 });
